@@ -13,7 +13,18 @@ const config =
         measurementId: "G-GP4W208DQQ"
     };
 
-    firebase.initializeApp(config);
+
+
+export const createUserProfileDocument = async (userAuth, additionData) => {
+    if (!userAuth) return;
+
+    const userRef = (firestore.doc(`users/${userAuth.uid}`));
+
+    const snapShot = await userRef.get();
+    console.log(snapShot);
+}
+
+firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
