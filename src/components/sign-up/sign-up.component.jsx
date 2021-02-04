@@ -75,18 +75,18 @@ class SignUp extends React.Component {
                     />
                     <FormInput
                     type='password'
+                    name='password'
+                    value={password}
+                    onChange={this.handleChange}
+                    label='Password'
+                    required
+                    />
+                    <FormInput
+                    type='password'
                     name='confirmPassword'
                     value={confirmPassword}
                     onChange={this.handleChange}
                     label='Confirm Password'
-                    required
-                    />
-                    <FormInput
-                    type='text'
-                    name='displayName'
-                    value={displayName}
-                    onChange={this.handleChange}
-                    label='Display Name'
                     required
                     />
                     <CustomButton type='submit'>SIGN UP</CustomButton>
